@@ -10,37 +10,34 @@
 }
 
 div#formcol1 {
-	
 	float:left;	
 	width: 100%;
 }
 
-div#formcol1 label {
-	float:left;
-	width:8.3em;
-	text-align:left;
-	display:block;
-	padding-right:.3em;	
-	background:#E0E0DD;
-	clear:right;
-	}
-	
+/* label alignment and width so input fields line up */
+label {
+	margin-right: .3em;
+	width: 6.3em;
+	display: inline-block;
+	text-align: right;
+}
+
+/* limit list formatting to top part of form */
+#formcol1 li {   
+	list-style:none;
+}
 
 div#formcol1 ul li {
-	list-style-type:none;
-	margin-left:-2em;
-	margin-bottom:.4em;
-	}
+	margin-bottom: .4em;
+}
 
 	
 div#formcol1 input {
-	
-	margin-left:1.5em;
-	text-align:left;
-	display:block;
-	clear:right;
-	background-color:#F4F4F4;
-	}
+	display: inline-block;
+	width: 20em;
+	text-align: left;
+	background-color: #F4F4F4;
+}
 
 
 /* div for radio buttons and check boxes */
@@ -54,14 +51,34 @@ div#formcol1 input {
 	float:left;
 }
 
+/* bring radio options closer together */
 #multchoice span {	
-	margin: 0 .3em;
+	margin: 0 .15em;
 }
 
 .submit-button {
 	margin:2em 0;
 	float:right;
 	width:70%;
+	clear: both;
+}
+
+/* form instructions */
+.form-instructions {
+	margin-bottom: .5em;
+	font-size: 0.95em;
+	color: #444;
+}
+
+/* highlighting of current keyboard and mouse focus */
+select:focus, select:active, input:focus, input:active, input:focus + label, input:active + label, label[for]:focus, label[for]:active {
+	color: #FFF !important;
+	background-color: #BB3D2F !important;
+}
+
+/* required field background cue */
+#formcol1 input.reqfield {
+	background:#FF9;
 }
 
 
